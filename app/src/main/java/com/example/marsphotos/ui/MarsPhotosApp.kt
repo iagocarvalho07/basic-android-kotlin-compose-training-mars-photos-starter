@@ -32,9 +32,9 @@ import com.example.marsphotos.ui.screens.HomeScreen
 import com.example.marsphotos.ui.screens.MarsViewModel
 
 @Composable
-fun MarsPhotosApp(modifier: Modifier = Modifier) {
+fun MarsPhotosApp() {
     Scaffold(
-        modifier = modifier.fillMaxSize(),
+        modifier = Modifier.fillMaxSize(),
         topBar = { TopAppBar(title = { Text(stringResource(R.string.app_name)) }) }
     ) {
         Surface(
@@ -43,9 +43,11 @@ fun MarsPhotosApp(modifier: Modifier = Modifier) {
                 .padding(it),
             color = MaterialTheme.colors.background
         ) {
-            val marsViewModel: MarsViewModel = viewModel()
+            val marsViewModel: MarsViewModel =
+                viewModel(factory = MarsViewModel.Factory)
             HomeScreen(
-                marsUiState = marsViewModel.marsUiState
+                marsUiState = marsViewModel.marsUiState,
+               // retryAction = marsViewModel::getMarsPhotos
             )
         }
     }
