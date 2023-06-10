@@ -45,3 +45,7 @@ Existe uma biblioteca Kotlin Serialization Converter desenvolvida pela comunidad
 . O kotlinx.serialization corresponde às chaves em uma resposta JSON com propriedades em um objeto de dados com o mesmo nome.
 
 Para usar um nome de propriedade diferente para uma chave, anote essa propriedade com a @SerialNameanotação e a chave JSON value.
+
+
+![d6334e93f09038b_856](https://github.com/iagocarvalho07/basic-android-kotlin-compose-training-mars-photos-starter/assets/71970033/d3f5d3da-6285-4453-acb5-7a3ba2c05eeb)
+
